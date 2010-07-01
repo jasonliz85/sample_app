@@ -1,0 +1,93 @@
+Script started on Thu 01 Jul 2010 10:54:28 BST
+jasonl@riddle:~/Documents/Rails/sample_app$ ls -l[C[C[C[Cal[Kls -l[Kls -lal[Kscript/server
+=> Booting WEBrick
+=> Rails 2.3.8 application starting on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2010-07-01 10:54:48] INFO  WEBrick 1.3.1
+[2010-07-01 10:54:48] INFO  ruby 1.8.7 (2010-01-10) [x86_64-linux]
+[2010-07-01 10:54:48] INFO  WEBrick::HTTPServer#start: pid=24808 port=3000
+
+
+Processing Rails::InfoController#properties (for 127.0.0.1 at 2010-07-01 10:54:55) [GET]
+  [4;36;1mSQL (0.6ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+Completed in 21ms (View: 3, DB: 1) | 200 OK [http://localhost/rails/info/properties]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-07-01 10:55:04) [GET]
+
+ActionController::RoutingError (No route matches "/pges/home" with {:method=>:get}):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-01 10:55:08) [GET]
+Rendering pages/home
+Completed in 14ms (View: 12, DB: 0) | 200 OK [http://localhost/pages/home]
+^C[2010-07-01 10:56:25] INFO  going to shutdown ...
+[2010-07-01 10:56:25] INFO  WEBrick::HTTPServer#start done.
+Exiting
+jasonl@riddle:~/Documents/Rails/sample_app$ git add .
+jasonl@riddle:~/Documents/Rails/sample_app$ git status
+# On branch static-pages
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   app/controllers/pages_controller.rb
+#	new file:   app/helpers/pages_helper.rb
+#	new file:   app/views/pages/contact.html.erb
+#	new file:   app/views/pages/home.html.erb
+#	new file:   server
+#	new file:   test/functional/pages_controller_test.rb
+#	new file:   test/unit/helpers/pages_helper_test.rb
+#
+jasonl@riddle:~/Documents/Rails/sample_app$ giot[K[Kt commit -am "Added a p[KPafes[K[K[Kges contrp;;[K[K[Koller"
+[static-pages ac619d8] Added a Pages controller
+ 6 files changed, 26 insertions(+), 0 deletions(-)
+ create mode 100644 app/controllers/pages_controller.rb
+ create mode 100644 app/helpers/pages_helper.rb
+ create mode 100644 app/views/pages/contact.html.erb
+ create mode 100644 app/views/pages/home.html.erb
+ create mode 100644 server
+ create mode 100644 test/functional/pages_controller_test.rb
+ create mode 100644 test/unit/helpers/pages_helper_test.rb
+jasonl@riddle:~/Documents/Rails/sample_app$ suof[K[Kfo[K[Kdo gem install s[Kre[Kspec -v 1.3.0
+[sudo] password for jasonl: 
+**************************************************
+
+  Thank you for installing rspec-1.3.0
+
+  Please be sure to read History.rdoc and Upgrade.rdoc
+  for useful information about this release.
+
+**************************************************
+Successfully installed rspec-1.3.0
+1 gem installed
+Installing ri documentation for rspec-1.3.0...
+Installing RDoc documentation for rspec-1.3.0...
+Could not find main page README.rdoc
+Could not find main page README.rdoc
+Could not find main page README.rdoc
+Could not find main page README.rdoc
+jasonl@riddle:~/Documents/Rails/sample_app$ sudo gem install rspec -v 1.3.0[C[C[C[C[1@-[1@r[1@a[1@i[1@l[1@s[C[C[C[C[C[C[C[C[C[K2
+**************************************************
+
+  Thank you for installing rspec-rails-1.3.2
+
+  If you are upgrading, do this in each of your rails apps
+  that you want to upgrade:
+
+    $ ruby script/gene
