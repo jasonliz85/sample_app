@@ -90,4 +90,310 @@ jasonl@riddle:~/Documents/Rails/sample_app$ sudo gem install rspec -v 1.3.0
   If you are upgrading, do this in each of your rails apps
   that you want to upgrade:
 
-    $ ruby script/gene
+    $ ruby script/generate rspec
+
+  Please be sure to read History.rdoc and Upgrade.rdoc
+  for useful information about this release.
+
+**************************************************
+Successfully installed rspec-rails-1.3.2
+1 gem installed
+Installing ri documentation for rspec-rails-1.3.2...
+Installing RDoc documentation for rspec-rails-1.3.2...
+Could not find main page README.rdoc
+Could not find main page README.rdoc
+Could not find main page README.rdoc
+Could not find main page README.rdoc
+jasonl@riddle:~/Documents/Rails/sample_app$ script [K/fer[K[K[Kgern[K[Kneraty[Ke rspec
+Configuring rspec and rspec-rails gems in config/environments/test.rb ...
+
+      exists  lib/tasks
+      create  lib/tasks/rspec.rake
+      create  script/autospec
+      create  script/spec
+      create  spec
+      create  spec/rcov.opts
+      create  spec/spec.opts
+      create  spec/spec_helper.rb
+jasonl@riddle:~/Documents/Rails/sample_app$ gt[K[Kgit.[K add .
+jasonl@riddle:~/Documents/Rails/sample_app$ s[Kgit status
+# On branch static-pages
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   config/environments/test.rb
+#	new file:   lib/tasks/rspec.rake
+#	new file:   script/autospec
+#	new file:   script/spec
+#	modified:   server
+#	new file:   spec/rcov.opts
+#	new file:   spec/spec.opts
+#	new file:   spec/spec_helper.rb
+#
+jasonl@riddle:~/Documents/Rails/sample_app$ git commit -am "Added RSpec files"
+[static-pages 8ede483] Added RSpec files
+ 8 files changed, 316 insertions(+), 1 deletions(-)
+ create mode 100644 lib/tasks/rspec.rake
+ create mode 100755 script/autospec
+ create mode 100755 script/spec
+ create mode 100644 spec/rcov.opts
+ create mode 100644 spec/spec.opts
+ create mode 100644 spec/spec_helper.rb
+jasonl@riddle:~/Documents/Rails/sample_app$ gem install sur[K[K[K[K[K[K[K[K[K[K[K[K[K[K[Ksudo gem install autotest-fsevent -v 0.1.1
+Building native extensions.  This could take a while...
+ERROR:  Error installing autotest-fsevent:
+	ERROR: Failed to build gem native extension.
+
+/usr/bin/ruby1.8 extconf.rb
+extconf.rb:1:in `require': no such file to load -- mkmf (LoadError)
+	from extconf.rb:1
+
+
+Gem files will remain installed in /usr/lib/ruby/gems/1.8/gems/sys-uname-0.8.4 for inspection.
+Results logged to /usr/lib/ruby/gems/1.8/gems/sys-uname-0.8.4/ext/gem_make.out
+jasonl@riddle:~/Documents/Rails/sample_app$ git push p[Korigin master
+Everything up-to-date
+jasonl@riddle:~/Documents/Rails/sample_app$ git push
+Everything up-to-date
+jasonl@riddle:~/Documents/Rails/sample_app$ guit [K[K[K[Kit status
+# On branch static-pages
+nothing to commit (working directory clean)
+jasonl@riddle:~/Documents/Rails/sample_app$ git
+usage: git [--version] [--exec-path[=GIT_EXEC_PATH]] [--html-path]
+           [-p|--paginate|--no-pager] [--no-replace-objects]
+           [--bare] [--git-dir=GIT_DIR] [--work-tree=GIT_WORK_TREE]
+           [--help] COMMAND [ARGS]
+
+The most commonly used git commands are:
+   add        Add file contents to the index
+   bisect     Find by binary search the change that introduced a bug
+   branch     List, create, or delete branches
+   checkout   Checkout a branch or paths to the working tree
+   clone      Clone a repository into a new directory
+   commit     Record changes to the repository
+   diff       Show changes between commits, commit and working tree, etc
+   fetch      Download objects and refs from another repository
+   grep       Print lines matching a pattern
+   init       Create an empty git repository or reinitialize an existing one
+   log        Show commit logs
+   merge      Join two or more development histories together
+   mv         Move or rename a file, a directory, or a symlink
+   pull       Fetch from and merge with another repository or a local branch
+   push       Update remote refs along with associated objects
+   rebase     Forward-port local commits to the updated upstream head
+   reset      Reset current HEAD to the specified state
+   rm         Remove files from the working tree and from the index
+   show       Show various types of objects
+   status     Show the working tree status
+   tag        Create, list, delete or verify a tag object signed with GPG
+
+See 'git help COMMAND' for more information on a specific command.
+jasonl@riddle:~/Documents/Rails/sample_app$ git log
+[?1h=commit 8ede483550e70f94d08fa945188576e34f7615bd[m
+Author: Jason <jasonlizarraga@googlemail.com>[m
+Date:   Thu Jul 1 11:13:14 2010 +0100[m
+[m
+    Added RSpec files[m
+[m
+commit ac619d8d53b3a389beb3cad8345c2fa6cc293b4a[m
+Author: Jason <jasonlizarraga@googlemail.com>[m
+Date:   Thu Jul 1 10:57:00 2010 +0100[m
+[m
+    Added a Pages controller[m
+[m
+commit 64756d24ad0a2deed5fbf10b85df037de298d679[m
+Author: Jason <jasonlizarraga@googlemail.com>[m
+Date:   Thu Jul 1 10:43:46 2010 +0100[m
+[m
+    Initial commit[m
+[K[?1l>jasonl@riddle:~/Documents/Rails/sample_app$ gem inst[K[K[K[K[K[K[K[Ksudo gem install autotest-growl -v 0.200[K[K.0
+
+[1;32mIn order to use autotest-growl, the following line has to be added to your
+~/.autotest file:
+
+require 'autotest/growl'
+
+Make sure the notification service installed on your computer:
+
+http://growl.info (Growl for Mac OS X)
+http://growlforwindows.com (Growl for Windows)
+http://www.galago-project.org (libnotify for Linux)
+
+If Growl notifications are not always displayed, take a look at the README
+for assistance.
+
+For more information, feedback and bug submissions, please visit:
+
+http://www.bitcetera.com/products/autotest-growl
+
+If you like this gem, please consider to recommend me on Working with
+Rails, thank you!
+
+http://workingwithrails.com/recommendation/new/person/11706-sven-schwyn
+
++-------------------------------------------------------------------------+
+| READ THIS IF YOU ARE UPGRADING FROM 0.1.X                               |
+| As of 0.2.0 this gem no longer depends on the rather heavy ZenTest gem  |
+| but the more lightweight autotest gem. You MUST uninstall ZenTest now!  |
+| Please refer to the README in case you need more ZenTest functionality. |
++-------------------------------------------------------------------------+
+[0m
+Successfully installed autotest-4.3.2
+Successfully installed autotest-growl-0.2.0
+2 gems installed
+Installing ri documentation for autotest-4.3.2...
+Installing ri documentation for autotest-growl-0.2.0...
+Installing RDoc documentation for autotest-4.3.2...
+Installing RDoc documentation for autotest-growl-0.2.0...
+jasonl@riddle:~/Documents/Rails/sample_app$ mate .autotet[Kst
+No command 'mate' found, did you mean:
+ Command 'kate' from package 'kate' (main)
+ Command 'gate' from package 'libgtkada2-bin' (universe)
+ Command 'date' from package 'coreutils' (main)
+ Command 'mute' from package 'aumix-common' (universe)
+ Command 'late' from package 'late' (universe)
+ Command 'matc' from package 'elmer' (universe)
+ Command 'mame' from package 'sdlmame' (multiverse)
+ Command 'yate' from package 'yate' (universe)
+ Command 'make' from package 'make' (main)
+mate: command not found
+jasonl@riddle:~/Documents/Rails/sample_app$ sudo gem install ZenTest
+sudo gem instaSuccessfully installed ZenTest-4.3.3
+1 gem installed
+Installing ri documentation for ZenTest-4.3.3...
+Installing RDoc documentation for ZenTest-4.3.3...
+jasonl@riddle:~/Documents/Rails/sample_app$ sudo gem install redgreen
+Successfully installed redgreen-1.2.2
+1 gem installed
+Installing ri documentation for redgreen-1.2.2...
+Installing RDoc documentation for redgreen-1.2.2...
+jasonl@riddle:~/Documents/Rails/sample_app$ sudo apt-get install libnotify-bin
+Reading package lists... 0%Reading package lists... 0%Reading package lists... 5%Reading package lists... Done
+Building dependency tree... 0%Building dependency tree... 0%Building dependency tree... 50%Building dependency tree... 50%Building dependency tree       
+Reading state information... 0%Reading state information... 0%Reading state information... Done
+The following packages were automatically installed and are no longer required:
+  libopenal1 libsvga1 mplayer-nogui libboost-date-time1.40.0 mplayer gnash-common linux-headers-2.6.32-22
+  libboost-thread1.40.0 linux-headers-2.6.32-22-generic
+Use 'apt-get autoremove' to remove them.
+The following NEW packages will be installed
+  libnotify-bin
+0 upgraded, 1 newly installed, 0 to remove and 0 not upgraded.
+Need to get 7,308B of archives.
+After this operation, 73.7kB of additional disk space will be used.
+0% [Working]            Get: 1 http://gb.archive.ubuntu.com/ubuntu/ lucid/universe libnotify-bin 0.4.5-1ubuntu3 [7,308B]
+            35% [1 libnotify-bin 2,590B/7,308B 35%]                                       100% [Working]              Fetched 7,308B in 0s (50.8kB/s)
+Selecting previously deselected package libnotify-bin.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 191330 files and directories currently installed.)
+Unpacking libnotify-bin (from .../libnotify-bin_0.4.5-1ubuntu3_amd64.deb) ...
+Processing triggers for man-db ...
+Setting up libnotify-bin (0.4.5-1ubuntu3) ...
+jasonl@riddle:~/Documents/Rails/sample_app$ k[Kmk[Kake [K[K[K[K[Kgern[K[K[K[Kscript/generatye[K[Ke respec_controller Pah[Kges home contact
+^C/usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/definitions/Asia/Yerevan.rb:165: Interrupt
+	from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+	from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:156:in `require'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:521:in `new_constants_in'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/dependencies.rb:156:in `require'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/vendor/tzinfo-0.3.12/tzinfo/timezone.rb:86:in `get'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/values/time_zone.rb:299:in `find_tzinfo'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/values/time_zone.rb:184:in `initialize'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/values/time_zone.rb:375:in `create'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/values/time_zone.rb:375:in `zones_map'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/values/time_zone.rb:374:in `each'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/values/time_zone.rb:374:in `zones_map'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/values/time_zone.rb:324:in `each'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/values/time_zone.rb:324:in `zones_map'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/values/time_zone.rb:390:in `[]'
+	from /usr/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/time/zones.rb:59:in `get_zone'
+	from /usr/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/initializer.rb:556:in `__send__'
+	from /usr/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/initializer.rb:556:in `initialize_time_zone'
+	from /usr/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/initializer.rb:152:in `process'
+	from /usr/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/initializer.rb:113:in `send'
+	from /usr/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/initializer.rb:113:in `run'
+	from /home/jasonl/Documents/Rails/sample_app/config/environment.rb:9
+	from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+	from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+	from /usr/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/generate.rb:1
+	from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+	from /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+	from script/generate:3
+
+jasonl@riddle:~/Documents/Rails/sample_app$ script/generate respec_controller Pages home contact[1P
+      exists  app/controllers/
+      exists  app/helpers/
+      exists  app/views/pages
+      create  spec/controllers/
+      create  spec/helpers/
+      create  spec/views/pages
+      create  spec/controllers/pages_controller_spec.rb
+      create  spec/helpers/pages_helper_spec.rb
+   identical  app/controllers/pages_controller.rb
+   identical  app/helpers/pages_helper.rb
+      create  spec/views/pages/home.html.erb_spec.rb
+   identical  app/views/pages/home.html.erb
+      create  spec/views/pages/contact.html.erb_spec.rb
+   identical  app/views/pages/contact.html.erb
+jasonl@riddle:~/Documents/Rails/sample_app$ rm -rf test/
+jasonl@riddle:~/Documents/Rails/sample_app$ rm -rf spec/ve[Kiews
+jasonl@riddle:~/Documents/Rails/sample_app$ rm - spec/helps[K[Kpers/pages_help_spec.rb[C[C[C[C[C[Cf spec/helpers/pages_help_spec.rb
+jasonl@riddle:~/Documents/Rails/sample_app$ got[K[Kit [K[K[K[Kgit log
+[?1h=commit 8ede483550e70f94d08fa945188576e34f7615bd[m
+Author: Jason <jasonlizarraga@googlemail.com>[m
+Date:   Thu Jul 1 11:13:14 2010 +0100[m
+[m
+    Added RSpec files[m
+[m
+commit ac619d8d53b3a389beb3cad8345c2fa6cc293b4a[m
+Author: Jason <jasonlizarraga@googlemail.com>[m
+Date:   Thu Jul 1 10:57:00 2010 +0100[m
+[m
+    Added a Pages controller[m
+[m
+commit 64756d24ad0a2deed5fbf10b85df037de298d679[m
+Author: Jason <jasonlizarraga@googlemail.com>[m
+Date:   Thu Jul 1 10:43:46 2010 +0100[m
+[m
+    Initial commit[m
+[K[?1l>jasonl@riddle:~/Documents/Rails/sample_app$ git push
+Everything up-to-date
+jasonl@riddle:~/Documents/Rails/sample_app$ ser[K[K[Kscrio[Kpt/server
+=> Booting WEBrick
+=> Rails 2.3.8 application starting on http://0.0.0.0:3000
+=> Call with -d to detach
+=> Ctrl-C to shutdown server
+[2010-07-02 11:21:52] INFO  WEBrick 1.3.1
+[2010-07-02 11:21:52] INFO  ruby 1.8.7 (2010-01-10) [x86_64-linux]
+[2010-07-02 11:21:52] INFO  WEBrick::HTTPServer#start: pid=28386 port=3000
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-02 11:21:55) [GET]
+Rendering pages/home
+Completed in 12ms (View: 9, DB: 0) | 200 OK [http://localhost/pages/home]
+
+
+Processing ApplicationController#home (for 127.0.0.1 at 2010-07-02 11:27:27) [GET]
+
+SyntaxError (/home/jasonl/Documents/Rails/sample_app/app/controllers/pages_controller.rb:16: syntax error, unexpected $end, expecting kEND):
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  /usr/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  /usr/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  /usr/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  /usr/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  /usr/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (40.6ms)
+Rendered rescues/_request_and_response (1.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing PagesController#home (for 127.0.0.1 at 2010-07-02 11:28:44) [GET]
+Rendering pages/home
+Completed in 9ms (View: 7, DB: 0) | 200 OK [http://localhost/pages/home]
+
+
+Processing PagesController#contact (for 127.0.0.1 at 2010-07-02 11:28:57) [GET]
+Rendering pages/con
